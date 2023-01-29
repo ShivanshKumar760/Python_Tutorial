@@ -1,0 +1,14 @@
+'''
+Boolean
+Boolean type provides two built-in values, True and False. These values are used to determine the given statement true or false. It denotes by the class bool. True can be represented by any non-zero value or 'T' whereas false can be represented by the 0 or 'F'. Consider the following example.
+
+# Python program to check the boolean type  
+print(type(True))  
+print(type(False))  
+print(false)  
+
+'''
+
+print(type(True))  
+print(type(False))  
+print(false)#will return error

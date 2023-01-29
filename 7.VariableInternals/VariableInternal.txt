@@ -1,0 +1,49 @@
+Python is an object oriented programming language.Python calls every entity in that store any values or any type of data as an 
+object.
+
+An object is an entity that has certain properties and that exhibit a certain type of behavior, example integer values are object that
+hold whole number only and they have infinite precision(properties);they support all arithmetic operations(behavior).
+
+so all data or value are reffered to as object in python.Similarly,we can say that a variable is also an object that refers to a value
+
+Every Python object has three(3) key attributes associated to it.
+    1)type
+    2)values
+    3)id
+
+
+(i)The type of an object
+-------------------------
+
+The type of an object determines the operation that can be performed on the object.Built in function [type()] returns the data type/
+data class of the object.
+
+
+Consider this :
+a=4
+print(type(4))#will print -- <class 'int'>
+print(type(a))#will print -- <class 'int'>
+if type(a) == type(4):
+    print("both are same")
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+(ii)The value of an object .
+----------------------------
+
+It is the data-item contained in the object.For a literal,the value is the literal itself and for a variable the value is the data-item
+it(variable)is currently referencing.Using (print) statement you can display value of an object .For example.
+
+example:
+a=4
+print(4)
+print(a)
+------------------------------------------------------------------------------------------------------------------------------------------
+
+(iii)The id of an object :
+
+The id of an object is generally the memory location of the object.Although (id) is implementation dependent but in most implementations
+it returns the memory location of the object,Built-in functions id() returns the id of an object,e.g.,
+
+a=4
+print(id(4))# will return the memory location of the integer value 4
+print(id(a))#will return the referencing memory location of the a which is same as integer value 4

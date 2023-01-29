@@ -1,0 +1,22 @@
+now in previous program HelloWorld.py except print("Hello World!") statement everything
+
+
+was under """ statement """ triple quote or # and the thing is statement under
+
+
+""" """ was not executed and also the statement which was written or typed after pound or hash # was not executed cause these statement are known as comment
+
+comment - are the additional info given to programmmer or user but are not executed by python interpreter 
+
+and thats why in previous program:
+
+#in python basic  fundamental to print or display anything on the screen we use a
+#inbuilt python function known as print()//function
+
+"""
+Syntax of print:
+
+print(statement) """
+
+
+this was not executed 

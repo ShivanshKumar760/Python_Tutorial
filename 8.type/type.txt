@@ -1,0 +1,13 @@
+(i)The type of an object
+-------------------------
+
+The type of an object determines the operation that can be performed on the object.Built in function [type()] returns the data type/
+data class of the object.
+
+
+Consider this :
+a=4
+print(type(4))#will print -- <class 'int'>
+print(type(a))#will print -- <class 'int'>
+if type(a) == type(4):
+    print("both are same")

@@ -1,0 +1,281 @@
+DATA TYPES:
+-------------
+Data can be of many types ex:character,integer(whole number),real(float),string etc .
+Anything enclosed in qoutes(" "/ ' ')  represent string data in python.Number without fraction represent 
+integer data .Number with fractional part represent real data and True and False represnt Boolean data.
+Since the data to be dealt is of many type,a programmig language must provide ways to facilities to handle all
+type of data.
+
+Before you learn how we can process Different Data type in python ,let us discuss various data type supported by
+or in python programming language.In this Discussion of data type ,we'll be able to know Python's capabilities to
+handle a specific data,such as memory space it allocate to hold a certain type of data and the range of value 
+supported for a Data type etc.
+
+Python offers following built in core data types
+(i)Numbers ----which include a)integer b)float c)complex number
+(ii)string
+(iii)character
+(iv)list
+(v)tuple
+(vi)dictionary
+
+----------------------------------------------------------------------------------------------------------------
+I)Numbers
+As it is clear by the name the number data type are used to store a numeric value in python
+The Number in python have following core data type:
+
+    a)integer 
+    -->Integer(signed)
+    -->Boolean
+    b)Floating-point Number
+    c)Complex Number
+
+Number stores numeric values. The integer, float, and complex values belong to a Python Numbers data-type. Python provides the type() function to know the data-type of the variable. Similarly, the isinstance() function is used to check an object belongs to a particular class.
+
+Python creates Number objects when a number is assigned to a variable. For example;
+
+a = 5  
+print("The type of a", type(a))  
+  
+b = 40.5  
+print("The type of b", type(b))  
+  
+c = 1+3j  
+print("The type of c", type(c))  
+print(" c is a complex number", isinstance(1+3j,complex))  
+Output:
+
+The type of a <class 'int'>
+The type of b <class 'float'>
+The type of c <class 'complex'>
+c is complex number: True
+Python supports three types of numeric data.
+
+Int - Integer value can be any length such as integers 10, 2, 29, -20, -150 etc. Python has no restriction on the length of an integer. 
+its only limited by the memory available .Unlike other programming language ,python 3.x provide single data type
+(int) to store any Integer  whether big ir small.It signed representation ie the integer can be positive or 
+negative.
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Boolean-These represent the truth value False or True .The Boolean type is a subtype of plain integer ,Boolean
+values False and True behaves like 0 and 1 ,respectively.To get boolean equivalent of 0 or 1 ,we can type bool(0)
+or bool(1),Python will return False or True respectively.
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Float - Float is used to store floating-point numbers like 1.9, 9.902, 15.2, etc.
+It is accurate upto 15 decimal points.
+-------------------------------------------------------------------------------------------------------------------------------------------
+complex - A complex number contains an ordered pair, i.e., x + iy where x and y denote the real and imaginary parts, respectively. 
+The complex numbers like 2.14j, 2.0 + 2.3j, etc.
+--------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+STRING:
+
+String 
+
+A python string is a sequence of character and each character can be individually 
+accessed using index.
+
+what is index?
+
+ans:-index are way to mark a element just like in text book or a note there is 
+a index to mark page number of a topic to aceess to those topic similarly in 
+programming we use indexing to access element like we used in array in C/C++
+
+int array_name={0,3,4,5,7};
+
+to access the element of the array we use indexing and Syntax to do that is :
+
+cout<<array_name[indexno.] 
+
+
+so in programming we follow 0 based idexing ie counting of element is started from 0
+
+{0 , 3 , 4 , 5 , 7}//element 
+[0   1   2   3   4]//indexno.
+
+cout<<array_name[1];
+
+output is :3
+
+
+Similarly in Python String are stored as individual character in contigous memory location
+ie continous memory bits ,with two way indexing ie in python we can do reverse 
+indexing which we were not able to do in C/C++
+
+lets understand this with an example:
+
+name="PYTHON"
+
+this name variable is holding a string type data so it will be stored in a continous 
+memory location
+
+-6  -5   -4  -3  -2   -1//reverse indexing 
+
+[P| Y  | T  | H | O   |N]
+
+0   1    2    3   4    5//forward indexing
+
+
+Thus ,we can acsess any character as <string name>[<indexno.>] example to acess the first character of string
+name="PYTHON" we'll write name[0] because the index of first character is 0(forward indexing) or -6(backward)
+
+
+In a string ,say name="PYTHON" of length ln,the valid indices are 0,1,2-----ln-1.That means ,if you try to give 
+something like :
+>>>name[ln]
+
+Python will give / return error like this :
+IndexError : String index out of range.
+
+the reason is obvious that in string there is no index equal to the length of the string,thus accessing 
+an element like this causes an error.
+
+Also another thing that we should /must know is that we cannot change the individual letters of a string in 
+place 
+by assignment because string are immutable and hence item assignment is not supported ie
+
+name="hello"
+name[0]="p"
+
+will cause an error like :
+
+TypeError:'str' object does not support item assignment
+
+However , we can assign to a string another string or an expression that returns a string using assignment
+eg:following statement is valid.
+
+name="hello"
+name="new"#string can be assigned expression that give strings
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+List
+Python Lists are similar to arrays in C. However, the list can contain data of different types. The items stored in the list are separated with a comma (,) and enclosed within square brackets [].
+
+We can use slice [:] operators to access the data of the list. The concatenation operator (+) and repetition operator (*) works with the list in the same way as they were working with the strings.
+
+Consider the following example.
+
+list1  = [1, "hi", "Python", 2]    
+#Checking type of given list  
+print(type(list1))  
+  
+#Printing the list1  
+print (list1)  
+  
+# List slicing  
+print (list1[3:])  
+  
+# List slicing  
+print (list1[0:2])   
+  
+# List Concatenation using + operator  
+print (list1 + list1)  
+  
+# List repetation using * operator  
+print (list1 * 3)  
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tuple
+A tuple is similar to the list in many ways. Like lists, tuples also contain the collection of the items of different data types. The items of the tuple are separated with a comma (,) and enclosed in parentheses ().
+
+A tuple is a read-only data structure as we can't modify the size and value of the items of a tuple.
+
+Let's see a simple example of the tuple.
+
+tup  = ("hi", "Python", 2)    
+# Checking type of tup  
+print (type(tup))    
+  
+#Printing the tuple  
+print (tup)  
+  
+# Tuple slicing  
+print (tup[1:])    
+print (tup[0:1])    
+  
+# Tuple concatenation using + operator  
+print (tup + tup)    
+  
+# Tuple repatation using * operator  
+print (tup * 3)     
+  
+# Adding value to tup. It will throw an error.  
+t[2] = "hi"  
+Output:
+
+<class 'tuple'>
+('hi', 'Python', 2)
+('Python', 2)
+('hi',)
+('hi', 'Python', 2, 'hi', 'Python', 2)
+('hi', 'Python', 2, 'hi', 'Python', 2, 'hi', 'Python', 2)
+
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    t[2] = "hi";
+TypeError: 'tuple' object does not support item assignment
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dictionary
+Dictionary is an unordered set of a key-value pair of items. It is like an associative array or a hash table where each key stores a specific value. Key can hold any primitive data type, whereas value is an arbitrary Python object.
+
+The items in the dictionary are separated with the comma (,) and enclosed in the curly braces {}.
+
+Consider the following example.
+
+d = {1:'Jimmy', 2:'Alex', 3:'john', 4:'mike'}     
+  
+# Printing dictionary  
+print (d)  
+  
+# Accesing value using keys  
+print("1st name is "+d[1])   
+print("2nd name is "+ d[4])    
+  
+print (d.keys())    
+print (d.values())
+
+Output:
+
+1st name is Jimmy
+2nd name is mike
+{1: 'Jimmy', 2: 'Alex', 3: 'john', 4: 'mike'}
+dict_keys([1, 2, 3, 4])
+dict_values(['Jimmy', 'Alex', 'john', 'mike'])
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Set
+Python Set is the unordered collection of the data type. It is iterable, mutable(can modify after creation), and has unique elements. In set, the order of the elements is undefined; it may return the changed sequence of the element. The set is created by using a built-in function set(), or a sequence of elements is passed in the curly braces and separated by the comma. It can contain various types of values. Consider the following example.
+
+# Creating Empty set  
+set1 = set()  
+  
+set2 = {'James', 2, 3,'Python'}  
+  
+#Printing Set value  
+print(set2)  
+  
+# Adding element to the set  
+  
+set2.add(10)  
+print(set2)  
+  
+#Removing element from the set  
+set2.remove(2)  
+print(set2)  
+Output:
+
+{3, 'Python', 'James', 2}
+{'Python', 'James', 3, 2, 10}
+{'Python', 'James', 3, 10}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
